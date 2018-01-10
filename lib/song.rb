@@ -34,7 +34,7 @@ class Song
   end
 
   def self.genre_count
-    @genres.assoc.to_s
+    @genres.each {|k, v| k.to_s}
   end
 
   def self.artist_count
