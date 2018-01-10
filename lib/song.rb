@@ -34,7 +34,7 @@ class Song
   end
 
   def self.genre_count
-    @@genres.sort_by { |k, v| v}
+    @@genres.sort_by { |k, v| v}.to_h
   end
 
   def self.artist_count
