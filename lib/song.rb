@@ -25,7 +25,7 @@ class Song
   end
 
   def self.artists
-    initilize(artist)
+    @@artists
   end
 
   def self.genre_count
