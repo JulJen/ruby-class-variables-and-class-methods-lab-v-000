@@ -24,12 +24,7 @@ class Song
     @@count
   end
 
-  def self.artists(count)
-    if count.empty?
-      0
-    else
-      input.to_i
-    end
+  def self.artists
   end
 
   def self.genre_count
