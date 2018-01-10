@@ -34,8 +34,7 @@ class Song
   end
 
   def self.genre_count
-    @@genres.group_by{ |v| v.sort }
-    # .flat_map{ |k, v| [k, v.size] }
+    @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }
     # @@genres.map do |k, v|
     #   v = 0
     #   if k == v
