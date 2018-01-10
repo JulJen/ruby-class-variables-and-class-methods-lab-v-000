@@ -34,12 +34,8 @@ class Song
   end
 
   def self.genre_count
-    @@genres.group_by{ |v| v }.map{ |k, v| [k => v.size] }
-    # @@genres.map do |k, v|
-    #   v = 0
-    #   if k == v
-    #     v += 1
-    #   else
+    # @@genres.group_by{ |v| v }.map{ |k, v| [k => v.size] }
+    inject(Hash.new(0)) { |h, x| h[x] += 1; h}
   end
 
   def self.artist_count
