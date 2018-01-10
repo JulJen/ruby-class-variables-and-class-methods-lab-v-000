@@ -4,10 +4,7 @@ class Song
 
   attr_accessor :name, :artist, :genre
   attr_writer :count
-  # attr_reader :name, :artist, :genre
 
-  # @@artist_count
-  # @@genre_count
   @@artists = []
   @@genres = []
   @@count = 0
