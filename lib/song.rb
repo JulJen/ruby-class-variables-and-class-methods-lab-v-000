@@ -34,7 +34,12 @@ class Song
   end
 
   def self.genre_count
-    @genres.default
+    @@genre.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }
+    # @@genres.map do |k, v|
+    #   v = 0
+    #   if k == v
+    #     v += 1
+    #   else
   end
 
   def self.artist_count
